@@ -1,9 +1,13 @@
 version: "3.8"
 
+volumes:
+  node_modules:
+
 services:
   web:
     build: .
     ports:
       - "3000:3000"
     volumes:
-      - .:/app  # ホストの全体をマウント
+      - .:/app # ホストの全体をマウント
+      - node_modules:/app/node_modules
