@@ -8,6 +8,7 @@ services:
     build: .
     ports:
       - "3000:3000"
+    restart: always
     volumes:
       - .:/app # ホストの全体をマウント
       - node_modules:/app/node_modules
